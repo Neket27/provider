@@ -1,0 +1,13 @@
+version: "3.5"
+
+services:
+  db_provider:
+    container_name: db_provider_name
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_USER: provider
+      POSTGRES_PASSWORD: provider
+      POSTGRES_DB: provider_db
+      PGDATA: /home/neket/DbWithDocker
+    image: postgres:16.1-alpine
